@@ -1,4 +1,5 @@
 import { BUSINESS, DIRECTIONS } from "@/lib/data";
+import { asset, srcset } from "@/lib/asset";
 import { Reveal } from "./Reveal";
 
 function Star({ className = "" }: { className?: string }) {
@@ -18,8 +19,8 @@ export function Hero() {
       {/* Real photograph of the cafe, captured from its own Google listing */}
       <div className="absolute inset-0 -z-10" aria-hidden="true">
         <img
-          src="/images/hero-1920.jpg"
-          srcSet="/images/hero-560.jpg 560w, /images/hero-800.jpg 800w, /images/hero-1080.jpg 1080w, /images/hero-1440.jpg 1440w, /images/hero-1920.jpg 1920w"
+          src={asset("/images/hero-1920.jpg")}
+          srcSet={srcset("/images/hero", [560, 800, 1080, 1440, 1920])}
           sizes="100vw"
           alt=""
           width={1920}

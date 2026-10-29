@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { asset, srcset } from "@/lib/asset";
 
 type Shot = {
   src: string;
@@ -14,8 +15,8 @@ type Shot = {
 
 const SHOTS: Shot[] = [
   {
-    src: "/images/hero-1920.jpg",
-    srcSet: "/images/hero-560.jpg 560w, /images/hero-800.jpg 800w, /images/hero-1080.jpg 1080w, /images/hero-1440.jpg 1440w, /images/hero-1920.jpg 1920w",
+    src: asset("/images/hero-1920.jpg"),
+    srcSet: srcset("/images/hero", [560, 800, 1080, 1440, 1920]),
     sizes: "(min-width: 1024px) 640px, 92vw",
     width: 1920,
     height: 1440,
@@ -23,8 +24,8 @@ const SHOTS: Shot[] = [
     caption: "The front of the house, after dusk — the green mesh, the lights, the tree.",
   },
   {
-    src: "/images/sign-1200.jpg",
-    srcSet: "/images/sign-640.jpg 640w, /images/sign-900.jpg 900w, /images/sign-1200.jpg 1200w",
+    src: asset("/images/sign-1200.jpg"),
+    srcSet: srcset("/images/sign", [640, 900, 1200]),
     sizes: "(min-width: 1024px) 420px, 92vw",
     width: 1200,
     height: 804,
@@ -32,8 +33,8 @@ const SHOTS: Shot[] = [
     caption: "\"Green House\" — hand-lettered in warm yellow on black.",
   },
   {
-    src: "/images/street-1200.jpg",
-    srcSet: "/images/street-640.jpg 640w, /images/street-900.jpg 900w, /images/street-1200.jpg 1200w",
+    src: asset("/images/street-1200.jpg"),
+    srcSet: srcset("/images/street", [640, 900, 1200]),
     sizes: "(min-width: 1024px) 420px, 92vw",
     width: 1200,
     height: 900,

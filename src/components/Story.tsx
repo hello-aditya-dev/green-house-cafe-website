@@ -1,4 +1,5 @@
 import { BUSINESS } from "@/lib/data";
+import { asset, srcset } from "@/lib/asset";
 import { Reveal } from "./Reveal";
 
 const FACTS = [
@@ -71,8 +72,8 @@ export function Story() {
             <figure className="group relative">
               <div className="overflow-hidden rounded-2xl shadow-[0_24px_60px_-24px_rgba(18,53,36,0.45)]">
                 <img
-                  src="/images/facade-1200.jpg"
-                  srcSet="/images/facade-640.jpg 640w, /images/facade-900.jpg 900w, /images/facade-1200.jpg 1200w"
+                  src={asset("/images/facade-1200.jpg")}
+                  srcSet={srcset("/images/facade", [640, 900, 1200])}
                   sizes="(min-width: 1024px) 420px, (min-width: 640px) 60vw, 92vw"
                   alt="The green-meshed wall of Green House Cafe glowing under warm string lights at night"
                   width={1200}

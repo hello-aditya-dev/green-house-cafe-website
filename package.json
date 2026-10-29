@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev -p 3101",
     "build": "next build",
-    "build:pages": "NEXT_BASE_PATH=/green-house-cafe-website NEXT_PUBLIC_SITE_URL=https://hello-aditya-dev.github.io next build",
+    "build:pages": "NEXT_BASE_PATH=/green-house-cafe-website NEXT_PUBLIC_BASE_PATH=/green-house-cafe-website NEXT_PUBLIC_SITE_URL=https://hello-aditya-dev.github.io next build",
     "start": "npx serve out",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"

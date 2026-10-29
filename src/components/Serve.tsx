@@ -1,4 +1,5 @@
 import { BUSINESS } from "@/lib/data";
+import { asset, srcset } from "@/lib/asset";
 import { Reveal } from "./Reveal";
 
 const SERVE = [
@@ -56,8 +57,8 @@ export function Serve() {
               <figure className="mt-8 max-w-sm">
                 <div className="overflow-hidden rounded-xl border border-white/10">
                   <img
-                    src="/images/canopy-900.jpg"
-                    srcSet="/images/canopy-640.jpg 640w, /images/canopy-900.jpg 900w, /images/canopy-1200.jpg 1200w"
+                    src={asset("/images/canopy-900.jpg")}
+                    srcSet={srcset("/images/canopy", [640, 900, 1200])}
                     sizes="(min-width: 1024px) 380px, 92vw"
                     alt="Fairy lights strung over the canopy of Green House Cafe at night"
                     width={900}

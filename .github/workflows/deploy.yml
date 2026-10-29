@@ -32,6 +32,7 @@ jobs:
         env:
           NEXT_PUBLIC_SITE_URL: https://hello-aditya-dev.github.io
           NEXT_BASE_PATH: /green-house-cafe-website
+          NEXT_PUBLIC_BASE_PATH: /green-house-cafe-website
       - name: Add .nojekyll
         run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
